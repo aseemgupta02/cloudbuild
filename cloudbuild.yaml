@@ -11,6 +11,15 @@ steps:
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/aseem-test-image:${COMMIT_SHA}']
+  
+#connect to cluster
+
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'gcloud'
+  args: ['container' , 'clusters' , 'get-credentials' , 'test-gke']
+  env:
+   - 'CLOUDSDK_COMPUTE_REGION=us-central1'
+   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
 
 
 #deploy to k8s
