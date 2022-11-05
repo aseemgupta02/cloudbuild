@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: aseem-test-image:latest
+        image: gcr.io/searce-playground-v1/aseem-test-image
         ports:
         - containerPort: 80
 ---
