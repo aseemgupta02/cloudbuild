@@ -14,7 +14,7 @@ steps:
   
 #connect to cluster
 
-- name: gcr.io/google.com/cloudsdktool/cloud-sdk'
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'gcloud'
   args: ['container' , 'clusters' , 'get-credentials' , 'test-gke']
   env:
