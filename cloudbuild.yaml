@@ -15,10 +15,10 @@ steps:
 
 #deploy to k8s
 - name: "gcr.io/cloud-builders/gke-deploy"
-  args:
+  args:[
   - 'apply'
   - '-f'
-  - 'deployment.yaml
+  - 'deployment.yaml]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=test-gke'
